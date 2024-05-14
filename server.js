@@ -1,7 +1,7 @@
 require('dotenv').config()
 const net = require('node:net');
 
-const NETCAT_PORT = 5000;
+const NETCAT_PORT = process.env.PORT || 5000;
 
 const netcatServer = net.createServer((socket) => {
   console.log('Netcat client connected');
