@@ -51,9 +51,9 @@ const netcatServer = net.createServer((socket) => {
     });
     socket.pipe(socket)
   }
-});
-netcatServer.on('error', (err) => {
-  console.error('Netcat connection error:', err);
+  socket.on('error', (err) => {
+    console.error('Netcat connection error:', err);
+  });
 });
 
 netcatServer.listen(NETCAT_PORT, () => {
