@@ -6,7 +6,7 @@ const app = express()
 const NETCAT_PORT = process.env.PORT || 5000;
 const requestCounts = {}
 const WINDOW_SIZE_IN_HOURS = 1;
-const MAX_WINDOW_REQUEST_COUNT = 100;
+const MAX_WINDOW_REQUEST_COUNT = 30;
 
 const resetRequestCounts = () => {
     for (const key in requestCounts) {
